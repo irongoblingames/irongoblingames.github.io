@@ -30,7 +30,7 @@ twitter_username: IronGoblinCorp
 github_username:  IronGoblinGames
 
 # Build settings
-theme: jekyll-theme-minimal
+# theme: jekyll-theme-minimal
 plugins:
   - jekyll-feed
 
