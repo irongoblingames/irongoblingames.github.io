@@ -5,14 +5,109 @@ html {
     /* background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%); */
     /* background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%); */
     /* background-image: linear-gradient(60deg, #29323c 0%, #485563 100%); */
-    background: #0F2027;  /* fallback for old browsers */
+    /* background: #0F2027;  /* fallback for old browsers */
 /* background: -webkit-linear-gradient(to bottom, #2C5364, #203A43, #0F2027);  */
-background: linear-gradient(to bottom, #2C5364, #1b2e34, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+/* background: linear-gradient(to bottom, #2C5364, #1b2e34, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: #000000;
 }
 
 .full-screen {
     height: 100vh;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.background-image {
+    background-image:
+
+                /* sky */           linear-gradient(0deg, rgba(238,174,202,1) 0%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 24%, rgba(0,0,0,0) 36%, rgba(0,0,0,0) 100%),
+                /* Mountains */     url('/img/mountains_1.png'),
+                /* Moon */          url('/img/moon.png'),
+                /* sky */           linear-gradient(0deg, rgba(238,174,202,1) 0%, rgba(107,106,106,1) 0%, rgba(228,181,202,1) 13%, rgba(236,170,164,1) 35%, rgba(216,167,197,1) 53%, rgba(78,119,167,1) 78%, rgba(37,78,125,1) 89%, rgba(23,60,102,1) 100%);
+    background-repeat:
+                /* sky */           no-repeat,
+                /* Mountains */     no-repeat,
+                /* Moon */          no-repeat,
+                /* sky */           no-repeat;
+    background-position:
+                /* sky */           center 0,
+                /* Mountains */     center 0,
+                /* Moon */          center 20vh,
+                /* sky */           center top;
+    background-size:
+                /* sky */           100vw 125vh,
+                /* Mountains */     auto 120vh,
+                /* Moon */          300px,
+                /* sky */           auto 100vh;
+    background-attachment:
+                /* sky */           local,
+                /* Mountains */     local,
+                /* Moon */          fixed,
+                /* sky */           fixed;
+}
+
+.background-repeat {
+    background-image:
+                /* rock fade in */  linear-gradient(to bottom, rgb(0,0,0), rgba(0, 0, 0, 0)),
+                /* Lava           linear-gradient(180deg, rgba(245, 208, 32, 0) 0%, rgba(245, 208, 32, 0.5) 30%, rgba(245, 56, 2, 0.6) 54%, rgba(245, 56, 2, 0.8) 74%),*/
+                /* rock pattern */  url('/img/rock_04_spec_2k.jpg');
+    background-repeat:
+                /* rock fade in */  no-repeat,
+                /* Lava           no-repeat, */
+                /* rock pattern */  repeat;
+    background-position:
+                /* rock fade in */  center 100vh,
+                /* Lava           bottom, */
+                /* rock pattern */  center 125vh;
+    background-size:
+                /* rock fade in */  100vw 150vh,
+                /* Lava           100vw 300vh,*/
+                /* rock pattern */  auto auto;
+    background-attachment:
+                /* rock fade in */  local,
+                /* Lava           local,*/
+                /* rock pattern */  local;
+
+}
+
+.strike {
+    text-decoration: line-through;
+}
+
+.hero-text {
+    text-shadow: black 3px 3px 3px;
+}
+
+.hero-link {
+    transform: rotate(-16deg);
+    display: block;
+    position: absolute;
+    right: 20%;
+    top: 62%;
+    font-size: 2rem;
+}
+
+.brand-logo img {
+    width: 200px;
+}
+
+.card .card-content {
+    height: 13rem;
+    overflow: hidden;
+}
+
+nav {
+    background-color: #00000061 !important;
+}
+
+header {
+    position: absolute;
+}
+
+.z-depth-0 {
+    box-shadow: inherit;
 }
 
 body {
