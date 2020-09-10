@@ -39,10 +39,10 @@ html {
                 /* Moon */          center 20vh,
                 /* sky */           center top;
     background-size:
-                /* fade to black */ auto 125vh,
+                /* fade to black */ 100vw 125vh,
                 /* Mountains */     auto 120vh,
                 /* Moon */          300px,
-                /* sky */           auto 100vh;
+                /* sky */           100vw 100vh;
     background-attachment:
                 /* fade to black */ local,
                 /* Mountains */     local,
