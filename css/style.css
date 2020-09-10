@@ -8,7 +8,9 @@ html {
     /* background: #0F2027;  /* fallback for old browsers */
 /* background: -webkit-linear-gradient(to bottom, #2C5364, #203A43, #0F2027);  */
 /* background: linear-gradient(to bottom, #2C5364, #1b2e34, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-background: #000000;
+    background: #000000;
+    scroll-behavior: smooth;
+
 }
 
 .full-screen {
@@ -22,27 +24,27 @@ background: #000000;
 .background-image {
     background-image:
 
-                /* sky */           linear-gradient(0deg, rgba(238,174,202,1) 0%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 24%, rgba(0,0,0,0) 36%, rgba(0,0,0,0) 100%),
+                /* fade to black */ linear-gradient(0deg, rgba(238,174,202,1) 0%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 24%, rgba(0,0,0,0) 36%, rgba(0,0,0,0) 100%),
                 /* Mountains */     url('/img/mountains_1.png'),
                 /* Moon */          url('/img/moon.png'),
                 /* sky */           linear-gradient(0deg, rgba(238,174,202,1) 0%, rgba(107,106,106,1) 0%, rgba(228,181,202,1) 13%, rgba(236,170,164,1) 35%, rgba(216,167,197,1) 53%, rgba(78,119,167,1) 78%, rgba(37,78,125,1) 89%, rgba(23,60,102,1) 100%);
     background-repeat:
-                /* sky */           no-repeat,
+                /* fade to black */ no-repeat,
                 /* Mountains */     no-repeat,
                 /* Moon */          no-repeat,
                 /* sky */           no-repeat;
     background-position:
-                /* sky */           center 0,
+                /* fade to black */ center 0,
                 /* Mountains */     center 0,
                 /* Moon */          center 20vh,
                 /* sky */           center top;
     background-size:
-                /* sky */           100vw 125vh,
+                /* fade to black */ auto 125vh,
                 /* Mountains */     auto 120vh,
                 /* Moon */          300px,
                 /* sky */           auto 100vh;
     background-attachment:
-                /* sky */           local,
+                /* fade to black */ local,
                 /* Mountains */     local,
                 /* Moon */          fixed,
                 /* sky */           fixed;
