@@ -155,9 +155,7 @@ main {
 }
 
 .box-button:hover {
-    /* border: 2px solid black; */
     background-color: var(--hover-highlight) !important;
-    /* color: black !important; */
 }
 
 h1 {
@@ -185,7 +183,28 @@ h3 {
     h3 {
         font-size: 1.5rem;
     }
+    .box-button {
+        padding: 0.1rem 2rem 2.5rem 2rem;
+        font-size: 1rem;
+    }
 }
+
+.iframe-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
 
 .text-focus-in{-webkit-animation:text-focus-in 1s cubic-bezier(.55,.085,.68,.53) both;animation:text-focus-in 1s cubic-bezier(.55,.085,.68,.53) both}
 
