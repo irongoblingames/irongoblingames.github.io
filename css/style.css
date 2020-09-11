@@ -1,3 +1,8 @@
+:root {
+    --screen-height: 90vh;
+    --hover-highlight: rgba(233, 169, 167,0.4);
+}
+
 html {
     /* font-family: 'Roboto', sans-serif; */
     /* font-family: 'Overlock', cursive; */
@@ -14,13 +19,16 @@ html {
 }
 
 .full-screen {
-    height: 100vh;
+    height: var(--screen-height);
 }
 
 .full-width {
     width: 100%;
 }
 
+.page-footer {
+    margin-top: 18vh;
+}
 .background-image {
     background-image:
 
@@ -36,13 +44,13 @@ html {
     background-position:
                 /* fade to black */ center 0,
                 /* Mountains */     center 0,
-                /* Moon */          center 20vh,
+                /* Moon */          center 10vh,
                 /* sky */           center top;
     background-size:
-                /* fade to black */ 100vw 125vh,
-                /* Mountains */     auto 120vh,
+                /* fade to black */ 100vw calc( var(--screen-height) + 25vh),
+                /* Mountains */     auto calc( var(--screen-height) + 20vh),
                 /* Moon */          300px,
-                /* sky */           100vw 100vh;
+                /* sky */           100vw var(--screen-height);
     background-attachment:
                 /* fade to black */ local,
                 /* Mountains */     local,
@@ -60,17 +68,17 @@ html {
     background-image:
                 /* rock fade in */  linear-gradient(to bottom, rgb(0,0,0), rgba(0, 0, 0, 0)),
                 /* Lava           linear-gradient(180deg, rgba(245, 208, 32, 0) 0%, rgba(245, 208, 32, 0.5) 30%, rgba(245, 56, 2, 0.6) 54%, rgba(245, 56, 2, 0.8) 74%),*/
-                /* rock pattern */  url('/img/rock_04_spec_2k.jpg');
+                /* rock pattern */  url('/img/rock_1.jpg');
     background-repeat:
                 /* rock fade in */  no-repeat,
                 /* Lava           no-repeat, */
                 /* rock pattern */  repeat;
     background-position:
-                /* rock fade in */  center 100vh,
+                /* rock fade in */  center var(--screen-height),
                 /* Lava           bottom, */
-                /* rock pattern */  center 125vh;
+                /* rock pattern */  center calc( var(--screen-height) + 25vh);
     background-size:
-                /* rock fade in */  100vw 150vh,
+                /* rock fade in */  100vw calc( var(--screen-height) + 50vh),
                 /* Lava           100vw 300vh,*/
                 /* rock pattern */  auto auto;
     background-attachment:
@@ -110,6 +118,10 @@ nav {
     background-color: #00000061 !important;
 }
 
+nav ul a:hover {
+    background-color: var(--hover-highlight);
+}
+
 header {
     position: absolute;
 }
@@ -132,8 +144,28 @@ main {
     white-space: nowrap;
 }
 
+.box-button {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    border: 2px solid white;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    padding: 0.8rem 2rem 3rem 2rem;
+    margin: 0;
+}
+
+.box-button:hover {
+    /* border: 2px solid black; */
+    background-color: var(--hover-highlight) !important;
+    /* color: black !important; */
+}
+
 h1 {
     /* line-height: 130%; */
+}
+
+h3 {
+    line-height: 125%;
 }
 
 .inherit-background {
