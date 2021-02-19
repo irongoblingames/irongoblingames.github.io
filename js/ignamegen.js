@@ -9,4 +9,7 @@ function init() {
   field.textContent = `${element} ${monster}`;
 }
 
+document.addEventListener("click", init);
+
 init();
+
