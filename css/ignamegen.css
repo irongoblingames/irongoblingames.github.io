@@ -1,7 +1,7 @@
 html {
   font-family: 'Heebo', sans-serif;
   color: rgb(252,211,77);
-  background: black;
+  background: #151515;
 }
 
 body {
@@ -16,4 +16,8 @@ body {
   align-items: center;
   text-align: center;
   min-height: 100vh;
+}
+
+h1 {
+  font-size: 6vh;
 }
