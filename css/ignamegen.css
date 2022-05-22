@@ -1,0 +1,23 @@
+html {
+  font-family: 'Heebo', sans-serif;
+  color: rgb(252,211,77);
+  background: #151515;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+}
+
+.center-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 6vh;
+}
