@@ -1,0 +1,531 @@
+:root {
+    --screen-height: 100vh;
+    --head-height;
+    --button-color: rgba(0, 0, 0, 0.7);
+    --hover-highlight: rgba(54, 54, 54, 0.6);
+    --sky-color: #1f4673;
+    --party-image: url('/img/concept_01_party.png');
+    --combat-image: url('/img/concept_02_combat.png');
+    --environment-image: url('/img/concept_03_environment.png');
+}
+
+html {
+    /* font-family: 'Roboto', sans-serif; */
+    /* font-family: 'Overlock', cursive; */
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300 !important;
+    /* background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%); */
+    /* background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%); */
+    /* background-image: linear-gradient(60deg, #29323c 0%, #485563 100%); */
+    /* background: #0F2027;  /* fallback for old browsers */
+/* background: -webkit-linear-gradient(to bottom, #2C5364, #203A43, #0F2027);  */
+/* background: linear-gradient(to bottom, #2C5364, #1b2e34, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #000000;
+    scroll-behavior: smooth;
+}
+
+b {
+    font-weight: 700 !important;
+}
+
+.sky {
+    background-image:               linear-gradient(0deg, rgba(238,174,202,1) 0%, rgba(107,106,106,1) 0%, rgba(228,181,202,1) 13%, rgba(236,170,164,1) 35%, rgba(216,167,197,1) 53%, rgba(78,119,167,1) 78%, rgba(37,78,125,1) 89%, rgba(23,60,102,1) 100%) !important;
+    background-repeat:              no-repeat;
+    background-position:            center top;
+    background-size:                100vw var(--screen-height);
+    background-attachment:          fixed;
+
+}
+
+.full-screen {
+    height: var(--screen-height);
+}
+
+.full-width {
+    width: 100%;
+}
+
+.page-footer {
+    margin-top: 35vh;
+}
+
+.buffer {
+    height: 40vh;
+}
+
+.fade-in-hero {
+    background-image:
+    /* fade back    */  linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 80%, rgba(0,0,0,0) 96%, rgba(0,0,0,0) 100%);
+    background-repeat:
+                /* fade back    */  no-repeat;
+    background-position:
+                /* fade to black */ center 0;
+}
+
+.background-image {
+    background-image:
+
+                /* fade to black */ linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 24%, rgba(0,0,0,0) 36%, rgba(0,0,0,0) 100%),
+                /* Mountains */     url('/img/mountains_1.png'),
+                /* Moon */          url('/img/moon.png'),
+                /* sky */           linear-gradient(0deg, rgba(238,174,202,1) 0%, rgba(107,106,106,1) 0%, rgba(228,181,202,1) 13%, rgba(236,170,164,1) 35%, rgba(216,167,197,1) 53%, rgba(78,119,167,1) 78%, rgba(37,78,125,1) 89%, rgba(23,60,102,1) 100%);
+    background-repeat:
+                /* fade to black */ no-repeat,
+                /* Mountains */     no-repeat,
+                /* Moon */          no-repeat,
+                /* sky */           no-repeat;
+    background-position:
+                /* fade to black */ center 0,
+                /* Mountains */     center 10vh,
+                /* Moon */          center 10vh,
+                /* sky */           center top;
+    background-size:
+                /* fade to black */ 100vw calc( var(--screen-height) + 25vh),
+                /* Mountains */     auto calc( var(--screen-height) + 20vh),
+                /* Moon */          300px,
+                /* sky */           100vw var(--screen-height);
+    background-attachment:
+                /* fade to black */ local,
+                /* Mountains */     local,
+                /* Moon */          fixed,
+                /* sky */           fixed;
+}
+
+
+/* PARTY */
+.party-image {
+    background-image:
+                /* fade back    */  linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 1%, rgba(0,0,0,0) 4%, rgba(0,0,0,0) 96%, rgba(0,0,0,1) 100%),
+                /* rock pattern */  url('/img/rock_cover_right.png'),
+                /* rock pattern */  url('/img/rock_cover_left.png'),
+                /* party */         var(--party-image);
+    background-repeat:
+                /* fade back    */  no-repeat,
+                /* rock pattern */  repeat-y,
+                /* rock pattern */  repeat-y,
+                /* party */         no-repeat;
+    background-position:
+                /* fade to black */ center 0,
+                /* rock pattern */  right calc( var(--screen-height) + 25vh),
+                /* rock pattern */  left calc( var(--screen-height) + 25vh),
+                /* party */         center 0;
+    background-size:
+                /* fade to black */ 75vw 100vh,
+                /* Mountains */     auto 100vh,
+                /* Mountains */     auto 100vh,
+                /* Mountains */     auto 100vh;
+    background-attachment:
+                /* fade to black */ local,
+                /* rock pattern */  local,
+                /* rock pattern */  local,
+                /* party */         fixed;
+}
+
+@media only screen and (max-width: 1200px) {
+    .party-image {
+        background-image:
+                    /* party */         url('/img/concept_01_party.png');
+        background-repeat:
+                    /* party */         no-repeat;
+        background-position:
+                    /* party */         center 6vh;
+        background-size:
+                    /* Mountains */     auto 100vh;
+        background-attachment:
+                    /* party */         fixed;
+
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .party-image {
+        background-image:
+                    /* fade back    */  linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 1%, rgba(0,0,0,0) 4%, rgba(0,0,0,0) 96%, rgba(0,0,0,1) 100%),
+                    /* party */         url('/img/concept_01_party.png');
+        background-repeat:
+                    /* fade back    */  no-repeat,
+                    /* party */         no-repeat;
+        background-position:
+                    /* fade to black */ center 0,
+                    /* party */         center 0;
+        background-size:
+                    /* Mountains */     100vw auto,
+                    /* Mountains */     100vw auto;
+        background-attachment:
+                    /* fade to black */ fixed,
+                    /* party */         fixed;
+
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .party-image {
+        background-image:
+                    /* fade back    */  linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 1%, rgba(0,0,0,0) 4%, rgba(0,0,0,0) 96%, rgba(0,0,0,1) 100%),
+                    /* party */         url('/img/concept_01_party.png');
+        background-repeat:
+                    /* fade back    */  no-repeat,
+                    /* party */         no-repeat;
+        background-position:
+                    /* fade to black */ center 6vh,
+                    /* party */         center center;
+        background-size:
+                    /* Mountains */     120vw auto,
+                    /* Mountains */     150vw auto;
+        background-attachment:
+                    /* fade to black */ fixed,
+                    /* party */         fixed;
+
+    }
+}
+
+/* COMBAT */
+.combat-image {
+    background-image:
+                /* fade back    */  linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 1%, rgba(0,0,0,0) 4%, rgba(0,0,0,0) 96%, rgba(0,0,0,1) 100%),
+                /* rock pattern */  url('/img/rock_cover_right.png'),
+                /* rock pattern */  url('/img/rock_cover_left.png'),
+                /* party */         url('/img/concept_02_combat.png');
+    background-repeat:
+                /* fade back    */  no-repeat,
+                /* rock pattern */  repeat-y,
+                /* rock pattern */  repeat-y,
+                /* party */         no-repeat;
+    background-position:
+                /* fade to black */ center 0,
+                /* rock pattern */  right calc( var(--screen-height) + 25vh),
+                /* rock pattern */  left calc( var(--screen-height) + 25vh),
+                /* party */         center 0;
+    background-size:
+                /* fade to black */ 75vw 100vh,
+                /* Mountains */     auto 100vh,
+                /* Mountains */     auto 100vh,
+                /* Mountains */     auto 100vh;
+    background-attachment:
+                /* fade to black */ local,
+                /* rock pattern */  local,
+                /* rock pattern */  local,
+                /* party */         fixed;
+}
+
+@media only screen and (max-width: 1200px) {
+    .combat-image {
+        background-image:
+                    /* fade back    */  linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 1%, rgba(0,0,0,0) 4%, rgba(0,0,0,0) 96%, rgba(0,0,0,1) 100%),
+                    /* party */         url('/img/concept_02_combat.png');
+        background-repeat:
+                    /* fade back    */  no-repeat,
+                    /* party */         no-repeat;
+        background-position:
+                    /* fade to black */ center 0,
+                    /* party */         center 0;
+        background-size:
+                    /* fade to black */ auto 100vh,
+                    /* Mountains */     auto 100vh;
+        background-attachment:
+                    /* fade to black */ local,
+                    /* party */         fixed;
+
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .combat-image {
+        background-image:
+                    /* party */         url('/img/concept_02_combat.png');
+        background-repeat:
+                    /* party */         no-repeat;
+        background-position:
+                    /* party */         center 6vh;
+        background-size:
+                    /* Mountains */     100vw auto;
+        background-attachment:
+                    /* party */         fixed;
+
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .combat-image {
+        background-image:
+                    /* party */         url('/img/concept_02_combat.png');
+        background-repeat:
+                    /* party */         no-repeat;
+        background-position:
+                    /* party */         center center;
+        background-size:
+                    /* Mountains */     120vw auto;
+        background-attachment:
+                    /* party */         fixed;
+
+    }
+}
+
+/* ENVIRONMENT */
+.environment-image {
+    background-image:
+                /* fade back    */  linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 1%, rgba(0,0,0,0) 4%, rgba(0,0,0,0) 96%, rgba(0,0,0,1) 100%),
+                /* rock pattern */  url('/img/rock_cover_right.png'),
+                /* rock pattern */  url('/img/rock_cover_left.png'),
+                /* party */         url('/img/concept_03_environment.png');
+    background-repeat:
+                /* fade back    */  no-repeat,
+                /* rock pattern */  repeat-y,
+                /* rock pattern */  repeat-y,
+                /* party */         no-repeat;
+    background-position:
+                /* fade to black */ center 0,
+                /* rock pattern */  45vw calc( var(--screen-height) + 25vh),
+                /* rock pattern */  1vw calc( var(--screen-height) + 25vh),
+                /* party */         center 0;
+    background-size:
+                /* fade to black */ 75vw 100vh,
+                /* Mountains */     auto 100vh,
+                /* Mountains */     auto 100vh,
+                /* Mountains */     auto 100vh;
+    background-attachment:
+                /* fade to black */ local,
+                /* rock pattern */  local,
+                /* rock pattern */  local,
+                /* party */         fixed;
+}
+
+@media only screen and (max-width: 1200px) {
+    .environment-image {
+        background-image:
+                    /* fade back    */  linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 1%, rgba(0,0,0,0) 4%, rgba(0,0,0,0) 96%, rgba(0,0,0,1) 100%),
+                    /* party */         url('/img/concept_03_environment.png');
+        background-repeat:
+                    /* fade back    */  no-repeat,
+                    /* party */         no-repeat;
+        background-position:
+                    /* fade to black */ center 0,
+                    /* party */         center 0;
+        background-size:
+                    /* fade to black */ auto 100vh,
+                    /* Mountains */     auto 100vh;
+        background-attachment:
+                    /* fade to black */ local,
+                    /* party */         fixed;
+
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .environment-image {
+        background-image:
+                    /* party */         url('/img/concept_03_environment.png');
+        background-repeat:
+                    /* party */         no-repeat;
+        background-position:
+                    /* party */         center 6vh;
+        background-size:
+                    /* Mountains */     100vw auto;
+        background-attachment:
+                    /* party */         fixed;
+
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .environment-image {
+        background-image:
+                    /* party */         url('/img/concept_03_environment.png');
+        background-repeat:
+                    /* party */         no-repeat;
+        background-position:
+                    /* party */         center center;
+        background-size:
+                    /* Mountains */     120vw auto;
+        background-attachment:
+                    /* party */         fixed;
+
+    }
+}
+
+
+.background-repeat {
+    background-image:
+                /* rock fade in */  linear-gradient(to bottom, rgba(0,0,0,0), rgba(0, 0, 0, 0)),
+                /* Lava           linear-gradient(180deg, rgba(245, 208, 32, 0) 0%, rgba(245, 208, 32, 0.5) 30%, rgba(245, 56, 2, 0.6) 54%, rgba(245, 56, 2, 0.8) 74%),*/
+                /* rock pattern */  url('/img/rock_1.jpg');
+    background-repeat:
+                /* rock fade in */  no-repeat,
+                /* Lava           no-repeat, */
+                /* rock pattern */  repeat;
+    background-position:
+                /* rock fade in */  center var(--screen-height),
+                /* Lava           bottom, */
+                /* rock pattern */  center calc( var(--screen-height) + 25vh);
+    background-size:
+                /* rock fade in */  100vw calc( var(--screen-height) + 50vh),
+                /* Lava           100vw 300vh,*/
+                /* rock pattern */  auto auto;
+    background-attachment:
+                /* rock fade in */  local,
+                /* Lava           local,*/
+                /* rock pattern */  local;
+}
+
+.strike {
+    text-decoration: line-through;
+}
+
+.hero-text {
+    text-shadow: black 3px 3px 3px;
+}
+
+.hero-link {
+    transform: rotate(-16deg);
+    display: block;
+    position: absolute;
+    right: 20%;
+    top: 62%;
+    font-size: 2rem;
+}
+
+.brand-logo img {
+    width: 200px;
+}
+
+.card .card-content {
+    height: 13rem;
+    overflow: hidden;
+}
+
+.vcenter-grid {
+    transform: translateY(37%);
+}
+
+/* nav {
+    background-color: #00000061 !important;
+} */
+
+nav ul a:hover {
+    background-color: var(--hover-highlight);
+}
+
+/* header {
+    position: absolute;
+} */
+
+.z-depth-0 {
+    box-shadow: inherit;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.clear {
+    background-color: rgba(0,0,0,0) !important;
+}
+
+.text-background {
+    /* background-color: rgba(36, 36, 36, 0.8) !important; */
+    background-color: rgba(72, 65, 55, 1) !important;
+    padding: 1vh 2vw !important;
+}
+
+.no-wrap {
+    white-space: nowrap;
+}
+
+.box-button {
+    background-color: var(--button-color) !important;
+    border: 2px solid white;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    padding: 0.8rem 2rem 3rem 2rem;
+    margin: 0;
+}
+
+.box-button:hover {
+    background-color: var(--hover-highlight) !important;
+}
+
+.paragraph-text {
+    font-size:      2vh !important;
+    text-align:     justify;
+    /* text-shadow:    black 3px 3px 3px; */
+}
+
+.hide-on-hover:hover {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 1s, opacity 1s linear;
+    cursor: default;
+}
+
+.hide-on-hover {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s linear;
+}
+
+h1 {
+    /* line-height: 130%; */
+}
+
+h3 {
+    line-height: 155%;
+}
+
+.inherit-background {
+    background-color: inherit !important;
+}
+
+@media screen and (max-width: 800px) {
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+        line-height: 130%;
+    }
+    .box-button {
+        padding: 0.1rem 2rem 2.5rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+.iframe-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+
+.text-focus-in{-webkit-animation:text-focus-in 1s cubic-bezier(.55,.085,.68,.53) both;animation:text-focus-in 1s cubic-bezier(.55,.085,.68,.53) both}
+
+ /* ----------------------------------------------
+  * Generated by Animista on 2020-8-22 22:32:5
+  * Licensed under FreeBSD License.
+  * See http://animista.net/license for more info.
+  * w: http://animista.net, t: @cssanimista
+  * ---------------------------------------------- */
+
+ @-webkit-keyframes text-focus-in{0%{-webkit-filter:blur(12px);filter:blur(12px);opacity:0}100%{-webkit-filter:blur(0);filter:blur(0);opacity:1}}@keyframes text-focus-in{0%{-webkit-filter:blur(12px);filter:blur(12px);opacity:0}100%{-webkit-filter:blur(0);filter:blur(0);opacity:1}}
