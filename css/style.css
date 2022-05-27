@@ -91,6 +91,11 @@ b {
     width: 200px;
 }
 
+.brand-logo-only img {
+    width: 83px;
+    opacity: 0.5;
+}
+
 .card .card-content {
     height: 13rem;
     overflow: hidden;
@@ -107,6 +112,24 @@ a {
 
 nav ul a:hover {
     background-color: var(--hover-highlight);
+}
+
+@media only screen and (max-width: 992px) {
+    nav .brand-logo {
+        left: inherit;
+        -webkit-transform: none;
+        transform: none;
+        opacity: 0.5;
+    }
+}
+
+nav {
+    background-color: blue !important;
+}
+
+
+.navbar-fixed {
+    height: 0 !important;
 }
 
 header {
