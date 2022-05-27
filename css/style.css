@@ -155,10 +155,7 @@ main {
 @media screen and (max-width: 700px) { .paragraph-text { font-size: 3vh !important; } }
 @media screen and (max-width: 415px) { .paragraph-text { font-size: 2vh !important; } }
 
-.title { font-weight: 900; font-size: 20vh; }
-@media screen and (max-width: 1320px) { .title { font-size: 12vh !important; } }
-@media screen and (max-width: 800px) { .title { font-size: 7vh !important; } }
-@media screen and (max-width: 516px) { .title { font-size: 6vh !important; } }
+.title { font-weight: 900; font-size: 12vw; }
 
 .hide-on-hover:hover {
     visibility: hidden;
