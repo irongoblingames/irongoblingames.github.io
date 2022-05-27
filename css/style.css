@@ -44,7 +44,7 @@ b {
 .full-width {  width: 100%; }
 
 .half-screen-on-large { height: calc( var(--screen-height)/2 ); }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1251px) {
     .half-screen-on-large { height: var(--screen-height); }
 }
 
@@ -158,7 +158,13 @@ main {
 
 .paragraph-text { font-size: 3vh !important; text-align: justify; }
 @media screen and (max-width: 800px) { .paragraph-text { font-size: 4vh !important; } }
+@media screen and (max-width: 700px) { .paragraph-text { font-size: 3vh !important; } }
 @media screen and (max-width: 415px) { .paragraph-text { font-size: 2vh !important; } }
+
+.title { font-weight: 900; font-size: 20vh; }
+@media screen and (max-width: 1320px) { .title { font-size: 12vh !important; } }
+@media screen and (max-width: 800px) { .title { font-size: 7vh !important; } }
+@media screen and (max-width: 516px) { .title { font-size: 6vh !important; } }
 
 .hide-on-hover:hover {
     visibility: hidden;
@@ -202,10 +208,8 @@ h4 { font-weight: bold; }
     }
 }
 
-.title {
-    font-weight: 900;
-    font-size: 20vh;
-}
+
+
 
 .iframe-container {
     position: relative;
