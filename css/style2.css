@@ -54,6 +54,10 @@ main {
     width: inherit;
 }
 
+.lowercase {
+    text-transform: none !important; 
+}
+
 .left-border-image {
     margin-left: 2.3vw;
     z-index: 1;
