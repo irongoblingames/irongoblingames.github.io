@@ -105,6 +105,10 @@ a {
     pointer-events: auto;
 }
 
+.lowercase {
+    text-transform: lowercase !important;
+}
+
 .vcenter-grid {
     transform: translateY(37%);
     pointer-events: none;
