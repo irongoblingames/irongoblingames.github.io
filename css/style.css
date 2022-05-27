@@ -1,91 +1,78 @@
 :root {
-    --screen-height: 90vh;
-    --hover-highlight: rgba(233, 169, 167,0.4);
+    --screen-height: 100vh;
+    --head-height;
+    --button-color: rgba(0, 0, 0, 0.7);
+    --hover-highlight: rgba(54, 54, 54, 0.6);
+    --party-image: url('/img/concept_01_party.png');
+    --combat-image: url('/img/concept_02_combat.png');
+    --mine-image: url('/img/concept_02_environment.png');
+    --tower-image: url('/img/concept_03_environment.png');
 }
 
 html {
-    /* font-family: 'Roboto', sans-serif; */
-    /* font-family: 'Overlock', cursive; */
-        font-family: 'Heebo', sans-serif;
-    /* background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%); */
-    /* background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%); */
-    /* background-image: linear-gradient(60deg, #29323c 0%, #485563 100%); */
-    /* background: #0F2027;  /* fallback for old browsers */
-/* background: -webkit-linear-gradient(to bottom, #2C5364, #203A43, #0F2027);  */
-/* background: linear-gradient(to bottom, #2C5364, #1b2e34, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300 !important;
     background: #000000;
     scroll-behavior: smooth;
-
 }
 
-.full-screen {
-    height: var(--screen-height);
+b {
+    font-weight: 700 !important;
 }
 
-.full-width {
-    width: 100%;
+.arrow {
+  box-sizing: border-box;
+  height: 3vw;
+  width: 3vw;
+  border-style: solid;
+  border-color: white;
+  border-width: 0px 4px 4px 0px;
+  transform: rotate(45deg);
+  transition: border-width 150ms ease-in-out;
+  position: relative;
+  bottom: 16vh;
+  margin: auto;
 }
 
-.page-footer {
-    margin-top: 18vh;
-}
-.background-image {
-    background-image:
-
-                /* fade to black */ linear-gradient(0deg, rgba(238,174,202,1) 0%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 24%, rgba(0,0,0,0) 36%, rgba(0,0,0,0) 100%),
-                /* Mountains */     url('/img/mountains_1.png'),
-                /* Moon */          url('/img/moon.png'),
-                /* sky */           linear-gradient(0deg, rgba(238,174,202,1) 0%, rgba(107,106,106,1) 0%, rgba(228,181,202,1) 13%, rgba(236,170,164,1) 35%, rgba(216,167,197,1) 53%, rgba(78,119,167,1) 78%, rgba(37,78,125,1) 89%, rgba(23,60,102,1) 100%);
-    background-repeat:
-                /* fade to black */ no-repeat,
-                /* Mountains */     no-repeat,
-                /* Moon */          no-repeat,
-                /* sky */           no-repeat;
-    background-position:
-                /* fade to black */ center 0,
-                /* Mountains */     center 0,
-                /* Moon */          center 10vh,
-                /* sky */           center top;
-    background-size:
-                /* fade to black */ 100vw calc( var(--screen-height) + 25vh),
-                /* Mountains */     auto calc( var(--screen-height) + 20vh),
-                /* Moon */          300px,
-                /* sky */           100vw var(--screen-height);
-    background-attachment:
-                /* fade to black */ local,
-                /* Mountains */     local,
-                /* Moon */          fixed,
-                /* sky */           fixed;
+.arrow:hover {
+  border-bottom-width: 6px;
+  border-right-width: 6px;
 }
 
-@media only screen and (max-width: 760px) {
-    .background-image {
-        background-attachment: initial;
-    }
+.full-screen { height: var(--screen-height); }
+
+.full-width {  width: 100%; }
+
+.half-screen-on-large { height: calc( var(--screen-height)/2 ); }
+@media screen and (max-width: 800px) {
+    .half-screen-on-large { height: var(--screen-height); }
 }
 
-.background-repeat {
-    background-image:
-                /* rock fade in */  linear-gradient(to bottom, rgb(0,0,0), rgba(0, 0, 0, 0)),
-                /* Lava           linear-gradient(180deg, rgba(245, 208, 32, 0) 0%, rgba(245, 208, 32, 0.5) 30%, rgba(245, 56, 2, 0.6) 54%, rgba(245, 56, 2, 0.8) 74%),*/
-                /* rock pattern */  url('/img/rock_1.jpg');
-    background-repeat:
-                /* rock fade in */  no-repeat,
-                /* Lava           no-repeat, */
-                /* rock pattern */  repeat;
-    background-position:
-                /* rock fade in */  center var(--screen-height),
-                /* Lava           bottom, */
-                /* rock pattern */  center calc( var(--screen-height) + 25vh);
-    background-size:
-                /* rock fade in */  100vw calc( var(--screen-height) + 50vh),
-                /* Lava           100vw 300vh,*/
-                /* rock pattern */  auto auto;
-    background-attachment:
-                /* rock fade in */  local,
-                /* Lava           local,*/
-                /* rock pattern */  local;
+footer {
+    /* height: 15vh; */
+}
 
+.align-bottom {
+    position: relative;
+    margin: auto;
+    bottom: 2vh;
+}
+/* .page-footer { margin-top: 30vh; } */
+
+.page-image {
+    background-repeat:      no-repeat;
+    background-position:    center 0;
+    background-size:        100vw auto;
+    background-attachment:  fixed;
+}
+
+.party-image { background-image: var(--party-image); }
+.mine-image { background-image: var(--mine-image); }
+.combat-image { background-image: var(--combat-image); }
+.tower-image { background-image: var(--tower-image); }
+
+@media screen and (max-width: 1100px) {
+    .page-image { background-size:        auto 100vh; }
 }
 
 .strike {
@@ -114,8 +101,13 @@ html {
     overflow: hidden;
 }
 
-nav {
-    background-color: #00000061 !important;
+a {
+    pointer-events: auto;
+}
+
+.vcenter-grid {
+    transform: translateY(37%);
+    pointer-events: none;
 }
 
 nav ul a:hover {
@@ -140,12 +132,18 @@ main {
   flex: 1 0 auto;
 }
 
+
+
+.clear {
+    background-color: rgba(0,0,0,0) !important;
+}
+
 .no-wrap {
     white-space: nowrap;
 }
 
 .box-button {
-    background-color: rgba(0, 0, 0, 0.2) !important;
+    background-color: var(--button-color) !important;
     border: 2px solid white;
     border-radius: 4px;
     font-family: 'Roboto', sans-serif;
@@ -158,13 +156,27 @@ main {
     background-color: var(--hover-highlight) !important;
 }
 
-h1 {
-    /* line-height: 130%; */
+.paragraph-text { font-size: 3vh !important; text-align: justify; }
+@media screen and (max-width: 800px) { .paragraph-text { font-size: 4vh !important; } }
+@media screen and (max-width: 415px) { .paragraph-text { font-size: 2vh !important; } }
+
+.hide-on-hover:hover {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 1s, opacity 1s linear;
+    cursor: default;
 }
 
-h3 {
-    line-height: 155%;
+.hide-on-hover {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s linear;
 }
+
+h3 { line-height: 155%; }
+
+h4 { font-weight: bold; }
+@media screen and (max-width: 800px) { h4 { text-align: center; } }
 
 .inherit-background {
     background-color: inherit !important;
@@ -188,6 +200,11 @@ h3 {
         padding: 0.1rem 2rem 2.5rem 2rem;
         font-size: 1rem;
     }
+}
+
+.title {
+    font-weight: 900;
+    font-size: 20vh;
 }
 
 .iframe-container {
