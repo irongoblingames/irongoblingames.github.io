@@ -48,16 +48,11 @@ b {
     .half-screen-on-large { height: var(--screen-height); }
 }
 
-footer {
-    /* height: 15vh; */
-}
-
 .align-bottom {
     position: relative;
     margin: auto;
     bottom: 2vh;
 }
-/* .page-footer { margin-top: 30vh; } */
 
 .page-image {
     background-repeat:      no-repeat;
@@ -132,8 +127,6 @@ main {
   flex: 1 0 auto;
 }
 
-
-
 .clear {
     background-color: rgba(0,0,0,0) !important;
 }
@@ -156,7 +149,8 @@ main {
     background-color: var(--hover-highlight) !important;
 }
 
-.paragraph-text { font-size: 3vh !important; text-align: justify; }
+.paragraph-text { font-size: 2.5vh !important; text-align: justify; }
+@media screen and (max-width: 930px) { .paragraph-text { font-size: 4vh !important; } }
 @media screen and (max-width: 800px) { .paragraph-text { font-size: 4vh !important; } }
 @media screen and (max-width: 700px) { .paragraph-text { font-size: 3vh !important; } }
 @media screen and (max-width: 415px) { .paragraph-text { font-size: 2vh !important; } }
