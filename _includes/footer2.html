@@ -1,0 +1,79 @@
+<footer class="page-footer inherit-background">
+
+    <div class="footer-copyright inherit-background">
+        <div class="container center">
+            <span class="grey-text text-lighten-3">©  {{ site.time | date: "%Y" }} Iron Goblin</span>
+        </div>
+    </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="{{base}}/js/site.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/basicscroll@3.0.4/dist/basicScroll.min.js"></script>
+<script type="text/javascript">
+    // More information about this technique/pen:
+    // https://medium.com/@electerious/parallax-scrolling-with-js-controlled-css-variables-63cfe96820c7#.o1kkd4cte
+
+    // document.querySelectorAll('.plx').forEach((elem) => {
+    //
+    // 	const modifier  = elem.getAttribute('data-modifier');
+    //     const from      = elem.getAttribute('data-from');
+    //     const to        = elem.getAttribute('data-to');
+    //
+    // 	basicScroll.create({
+    // 		elem: elem,
+    // 		from: `${from}`,
+    // 		to: `${to}`,
+    // 		direct: true,
+    //         track: true,
+    // 		props: {
+    // 			'--translateY': {
+    // 				from: '0',
+    // 				to: `${ 10 * modifier }px`
+    // 			}
+    // 		}
+    // 	}).start();
+    //
+    // });
+
+    // document.querySelectorAll('.fade-on-appear').forEach((elem) => {
+    //
+    // 	basicScroll.create({
+    // 		elem: elem,
+    // 		from: 'middle-bottom',
+    // 		to: 'middle-middle',
+    // 		props: {
+    // 			'--opacity': {
+    // 				from: 0.1,
+    // 				to: .99,
+    //                 timeing: 'quartInOut',
+    //                 direct: true
+    // 			}
+    // 		}
+    // 	}).start();
+    //
+    // });
+
+
+    // document.querySelectorAll('.page-image').forEach((elem) => {
+    //
+    //     const modifier  = elem.getAttribute('data-modifier');
+    //     const from      = elem.getAttribute('data-from');
+    //     const to        = elem.getAttribute('data-to');
+    //
+    //     basicScroll.create({
+    //         elem: elem,
+    //         from: `${from}`,
+    //         to: `${to}`,
+    //         direct: true,
+    //         track: true,
+    //         props: {
+    //             '--translateY': {
+    //                 from: '0',
+    //                 to: `${ 10 * modifier }px`
+    //             }
+    //         }
+    //     }).start();
+    //
+    // });
+
+</script>
